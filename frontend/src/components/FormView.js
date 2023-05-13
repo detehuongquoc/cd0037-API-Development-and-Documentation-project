@@ -20,6 +20,7 @@ class FormView extends Component {
       type: 'GET',
       success: (result) => {
         this.setState({ categories: result.categories });
+        console.log(result)
         return;
       },
       error: (error) => {
@@ -48,6 +49,7 @@ class FormView extends Component {
       crossDomain: true,
       success: (result) => {
         document.getElementById('add-question-form').reset();
+        console.log("result", result)
         return;
       },
       error: (error) => {
